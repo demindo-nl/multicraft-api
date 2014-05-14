@@ -1,0 +1,23 @@
+{
+    "name": "mcprohosting/multicraft-api",
+    "description": "",
+    "authors": [
+        {
+            "name": "xhost.ch",
+            "email": ""
+        }
+    ],
+    "require": {
+        "php": ">=5.2.0",
+        "ext-curl": "*"
+    },
+    "suggest": {
+        "illuminate/support": "Installing Illuminate/Support will all you to take advantage of Facade for the Multicraft API."
+    },
+    "autoload": {
+        "psr-0": {
+            "Mcprohosting\\MulticraftApi": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
