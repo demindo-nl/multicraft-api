@@ -294,8 +294,8 @@ class MulticraftApi
             return array('success' => false, 'errors' => array($error), 'data' => '');
         }
         $this->lastResponse = $response;
-        $ret = json_decode($response);
-        if (!is_array($ret)) {
+        $ret = json_decode($response, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
             return array('success' => false, 'errors' => array($ret), 'data' => array());
         }
         return $ret;
