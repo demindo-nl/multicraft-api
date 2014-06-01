@@ -12,6 +12,7 @@ namespace Mcprohosting\MulticraftApi;
  *      - Removal of file_get_contents fallback (curl is being required for this package)
  *      - Addition of method to update credentials after instantiation (for use in DI schemes and facade patterns), and
  *        ability to pass in array of credentials.
+ *      - Addition of a method to update curl options.
  *      - Minor linting
  *
  *   All rights reserved.
@@ -31,6 +32,8 @@ class MulticraftApi
     private $user;
 
     private $lastResponse = '';
+
+    protected $options = array();
 
     private $methods = array(
         //User functions
@@ -180,6 +183,13 @@ class MulticraftApi
         $this->setCredentials($url, $user, $key);
     }
 
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
+    }
+
     public function setCredentials($url, $user = null, $key = null)
     {
         if (is_array($url)) {
@@ -192,6 +202,8 @@ class MulticraftApi
         $this->url = $url;
         $this->user = $user;
         $this->key = $key;
+        
+        return $this;
     }
 
     public function __call($function, $args)
@@ -276,11 +288,12 @@ class MulticraftApi
     {
         $curl = curl_init($url);
 
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $query);
-
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt_array($curl, array(
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => $query,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false
+        ) + $this->options);
 
         $response = curl_exec($curl);
         $error = curl_error($curl);
