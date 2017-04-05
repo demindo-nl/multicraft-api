@@ -1,6 +1,6 @@
-#multicraft-api
+# multicraft-api
 
-This package is based on the mcprohosting/multicraft-api package.
+This package is based on the [mcprohosting/multicraft-api](https://github.com/MCProHosting/multicraft-api) package.
 
 This repo is a simple Composer package for the Multicraft API (as there was not one already). Included in this package are a service provider (with a config file) and facade for the Laravel framework (but you are free to simply ignore them if you're not wanting to use Laravel) as well as the Multicraft API class.
 
