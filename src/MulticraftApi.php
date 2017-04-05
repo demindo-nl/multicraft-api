@@ -273,8 +273,8 @@ class MulticraftApi
             }
             return array('success' => false, 'errors' => array($error), 'data' => '');
         }
-        $this->lastResponse = $response;
         
+        $this->lastResponse = $response;
         $ret = json_decode($response, true);
         
         if (!is_array($ret))
