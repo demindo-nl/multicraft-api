@@ -22,7 +22,7 @@ class MulticraftApiServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/multicraft.php' => config_path('multicraft.php'),
+            __DIR__.'/config/multicraft.php' => config_path('multicraft.php'),
         ]);
     }
 
@@ -33,10 +33,10 @@ class MulticraftApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $config = __DIR__ . '/../../config/multicraft.php';
+        $config = __DIR__ . '/config/multicraft.php';
         $this->mergeConfigFrom($config, 'multicraft');
 
-        $this->publishes([__DIR__ . '/../../config/multicraft.php' => config_path('multicraft.php')], 'config');
+        $this->publishes([__DIR__ . '/config/multicraft.php' => config_path('multicraft.php')], 'config');
         
         $this->app->bind('multicraftapi', function ()
         {

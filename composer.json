@@ -1,6 +1,7 @@
 {
     "name": "demindo/multicraft-api",
     "description": "A Multicraft API client",
+    "keywords": ["laravel", "multicraft"],
     "license": "MIT",
     "authors": [
         {
@@ -20,8 +21,8 @@
         "illuminate/support": "Installing Illuminate/Support will all you to take advantage of Facade for the Multicraft API."
     },
     "autoload": {
-        "psr-0": {
-            "Demindo\\MulticraftApi": "src/"
+        "psr-4": {
+            "Demindo\\MulticraftApi\\": "src/"
         }
     },
     "minimum-stability": "stable"
