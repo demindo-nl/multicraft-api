@@ -1,7 +1,11 @@
 {
-    "name": "mcprohosting/multicraft-api",
+    "name": "demindo/multicraft-api",
     "description": "",
     "authors": [
+        {
+            "name": "Ronald van Eede",
+            "email": "ronaldvaneede@gmail.com"
+        },
         {
             "name": "Connor Peet",
             "email": "connor@connorpeet.com"
@@ -16,7 +20,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Mcprohosting\\MulticraftApi": "src/"
+            "Demindo\\MulticraftApi": "src/"
         }
     },
     "minimum-stability": "stable"
