@@ -16,7 +16,7 @@ namespace Demindo\MulticraftApi;
  *      - Minor linting
  *
  *   Adjustments made by Demindo include:
- *      - Updated list of methods
+ *      - Updated __call and call methods to be mostly the same as the latest the the MulticraftApi packaged with Multicraft
  *
  *   All rights reserved.
  *
@@ -252,7 +252,6 @@ class MulticraftApi
      
         curl_setopt ($curl, CURLOPT_POST, true); 
         curl_setopt ($curl, CURLOPT_POSTFIELDS, $query); 
-     
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_VERBOSE, true);
