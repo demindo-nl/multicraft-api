@@ -1,14 +1,15 @@
 {
     "name": "demindo/multicraft-api",
-    "description": "",
+    "description": "A Multicraft API client",
+    "license": "MIT",
     "authors": [
-        {
-            "name": "Ronald van Eede",
-            "email": "ronaldvaneede@gmail.com"
-        },
         {
             "name": "Connor Peet",
             "email": "connor@connorpeet.com"
+        },
+        {
+            "name": "Ronald van Eede",
+            "email": "ronaldvaneede@gmail.com"
         }
     ],
     "require": {
