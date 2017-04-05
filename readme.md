@@ -1,4 +1,6 @@
-# multicraft-api
+# multicraft-api 
+
+[![Build Status](https://travis-ci.org/demindo-nl/multicraft-api.svg?branch=master)](https://travis-ci.org/demindo-nl/multicraft-api)
 
 This package is based on the [mcprohosting/multicraft-api](https://github.com/MCProHosting/multicraft-api) package.
 
