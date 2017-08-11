@@ -1,6 +1,6 @@
 <?php
 
-namespace Mcprohosting\MulticraftApi;
+namespace Demindo\MulticraftApi;
 
 /**
  *

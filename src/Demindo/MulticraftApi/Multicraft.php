@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Mcprohosting\MulticraftApi;
+namespace Demindo\MulticraftApi;
 
 use \Illuminate\Support\Facades\Facade;
 

@@ -1,4 +1,6 @@
-<?php namespace Mcprohosting\MulticraftApi;
+<?php 
+
+namespace Demindo\MulticraftApi;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +21,7 @@ class MulticraftApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('mcprohosting/multicraft-api');
+        $this->package('demindo/multicraft-api');
     }
 
     /**
